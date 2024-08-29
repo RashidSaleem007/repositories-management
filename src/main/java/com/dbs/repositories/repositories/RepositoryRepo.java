@@ -10,7 +10,9 @@ import java.util.Optional;
 public interface RepositoryRepo extends JpaRepository<RepositoryEntity, Long> {
     @Query("Select repo from RepositoryEntity repo where repo.owner.id = :ownerId and repo.repositoryName = :repositoryName")
     Optional<RepositoryEntity> findByOwnerAndRepositoryName(final @Param("ownerId") Long ownerId, @Param("repositoryName") final String repositoryName);
+
     Boolean existsByRepositoryName(final String repositoryName);
+
     Optional<RepositoryEntity> findByRepositoryName(final String repositoryName);
 
 }

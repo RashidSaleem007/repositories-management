@@ -1,6 +1,5 @@
 package com.dbs.repositories.dto;
 
-import com.dbs.repositories.entities.OwnerEntity;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
 import lombok.Data;
